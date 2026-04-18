@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café de Especialidad & Pastelería</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primario: #4A2C2A; /* Marrón café oscuro */
+            --acento: #D4A373;   /* Tono café con leche */
+            --fondo: #FDFCFB;    /* Blanco crema */
+            --texto: #2D2D2D;
+            --espaciado: 40px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--fondo);
+            color: var(--texto);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('tu-foto-local.jpg'); /* Reemplazar con tu imagen */
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--espaciado) 20px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            border-bottom: 1px solid var(--acento);
+            padding-bottom: 10px;
+            margin-top: 50px;
+            color: var(--primario);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .menu-grid { grid-template-columns: 1fr; }
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+
+        .item-name { font-weight: 600; }
+        .dots { flex-grow: 1; border-bottom: 1px dotted #ccc; margin: 0 10px; }
+
+        /* Sección Recomendados */
+        .recommender {
+            background-color: #F7F3F0;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 60px;
+        }
+
+        .rec-card {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid var(--acento);
+            background: white;
+        }
+
+        .btn-pedir {
+            display: block;
+            background-color: var(--primario);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 40px;
+            transition: background 0.3s;
+        }
+
+        .btn-pedir:hover { background-color: #2D1A19; }
+
+        footer { text-align: center; padding: 40px; font-size: 0.9rem; color: #777; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tu Cafetería</h1>
+    <p>Pastelería de Autor & Café de Especialidad</p>
+</header>
+
+<div class="container">
+
+    <h2 class="section-title">Cafetería</h2>
+    <div class="menu-grid">
+        <div class="menu-item"><span class="item-name">Espresso</span><div class="dots"></div></div>
+        <div class="menu-item"><span class="item-name">Cappuccino</span><div class="dots"></div></div>
+        <div class="menu-item"><span class="item-name">Latte Vainilla</span><div class="dots"></div></div>
+        <div class="menu-item"><span class="item-name">Iced Latte</span><div class="dots"></div></div>
+    </div>
+
+    <h2 class="section-title">Nuestra Pastelería</h2>
+    <div class="menu-grid">
+        <div class="menu-item"><span class="item-name">Cookie de Chocolate</span><div class="dots"></div></div>
+        <div class="menu-item"><span class="item-name">Brownie Melcocho</span><div class="dots"></div></div>
+        <div class="menu-item"><span class="item-name">Torta del Día</span><div class="dots"></div></div>
+        <div class="menu-item"><span class="item-name">Medialuna Rellena</span><div class="dots"></div></div>
+    </div>
+
+    <div class="recommender">
+        <h2 style="font-family: 'Playfair Display', serif; margin-top: 0;">Si te gusta esto, te va a encantar...</h2>
+
+        <div class="rec-card">
+            <strong>¿Amante del chocolate intenso?</strong><br>
+            Pedí nuestro Brownie con un Espresso corto. El contraste es perfecto.
+        </div>
+
+        <div class="rec-card">
+            <strong>¿Algo fresco para el camino?</strong><br>
+            Probá el Iced Coffee con una Cookie XL. Ideal para llevar.
+        </div>
+    </div>
+
+    <a href="#" class="btn-pedir">Hacer pedido para Take Away</a>
+
+</div>
+
+<footer>
+    <p>Abierto de Lunes a Sábados • 08:00 a 20:00</p>
+    <p>Calle Falsa 123, Tu Ciudad</p>
+</footer>
+
+</body>
+</html>
